@@ -46,7 +46,8 @@
 
 
 ## 🔗 Links
-[Live site HERE]()
+[Live site Link HERE](https://reactsmartextensiondashboard.netlify.app/)
+[Repo Link Here](https://github.com/jeff20501/ReactSmartExtensionDashboard)
 
 
 ## ⚙ Built with
