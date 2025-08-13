@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /*Backgrounds*/
+    --bg: linear-gradient(180deg, hsl(217, 61%, 90%), hsl(217, 61%, 90%));
+    --bgTabs: hsl(200, 60%, 99%);
+    --slider:linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    /*Text*/
+    --textColor: hsl(226, 11%, 37%);
+    --hColor: hsl(226, 25%, 17%);
+    --focusColor: hsl(3, 71%, 56%);
+    --buttonColor: hsl(3, 77%, 44%);
+    --fontFamily: 'Noto Sans';
+    --fontSizeH: 2rem;
+    --font-size: 1.2rem;
+    /*Toogle Moon Sun*/
+    --moonSunBg: hsl(0, 0%, 78%);
+    
+}
+
+.darkmode{
+    /*Backgrounds*/
+    --bg:linear-gradient(180deg, #040918 0%, #091540 100%);
+    --bgTabs: hsl(225, 23%, 24%);    
+    /*Text*/
+    --textColor: hsl(0, 0%, 78%);
+    --hColor: hsl(200, 60%, 99%);
+    --focusColor: hsl(3, 71%, 56%);
+    --buttonColor: hsl(3, 77%, 44%);
+    /*Toogle Moon Sun*/
+    --moonSunBg: hsl(226, 11%, 37%);
+}
+
+img{
+    max-inline-size: 100%;
+    display: block;
+}
+
+body{
+    background: var(--bg);
+    font-family: var(--fontFamily);
+    transition: 900ms;
+    @media(width<850px){
+        padding: 15px;
+    }
+}
+
+.main{
+    background-color: var(--bg);
+    font-size: var(--font-size);
+    color:var(--textColor);
+    max-inline-size: 1450px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bgTabs);
+    border-radius: 15px;
+    padding: 20px;
+    margin-block: 20px;
+}
+
+input{
+    display: none;
+}
+
+.moonSun{
+    background-color: var(--moonSunBg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inline-size: 40px;
+    block-size: 40px;
+    border-radius: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input:empty + .moonSun::before{
+    content: url('./components/designFiles/images/icon-moon.svg');
+    transition: 600ms;
+    margin: 5px;    
+}
+
+.darkmode input:checked + .moonSun::before{
+    content:url('./components/designFiles/images/icon-sun.svg');
+}
+
+.wrapper{
+    max-inline-size: 100%;
+    display: grid;
+    gap: 20px;
+    @media(width>850px){
+        grid-template-columns: repeat(3,1fr);
+    };
+    
+}
