@@ -45,8 +45,10 @@ body{
     background: var(--bg);
     font-family: var(--fontFamily);
     transition: 900ms;
+    padding-block:30px;
     @media(width<850px){
-        padding: 15px;
+        padding-block: 20px;
+        padding-inline: 15px;
     }
 }
 
