@@ -14,7 +14,7 @@ export function Page(){
         return localStorage.getItem('darkmode')==='active'
     })
     const [tab, setTab]=useState('all')
-
+ 
     //useEffects
     //data fetch
     useEffect(()=>{
